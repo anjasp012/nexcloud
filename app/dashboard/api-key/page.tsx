@@ -8,7 +8,7 @@ import { getApiKey } from "@/lib/data"
 import Link from "next/link"
 
 const ApiKey = async () => {
-    const apiKeys = await getApiKey();
+    const apiKeys: any[] = await getApiKey();
     return (
         <>
             <Card>
