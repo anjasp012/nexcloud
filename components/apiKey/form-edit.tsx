@@ -7,12 +7,7 @@ import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 
-interface ApiKeyType {
-    id: string;
-    api_key: string;
-}
-
-const FormEdit = ({ apiKey }: { apiKey: ApiKeyType }) => {
+const FormEdit = ({ apiKey }: { apiKey: any }) => {
     const [state, formAction] = useFormState(updateApiKey, null);
     const { pending } = useFormStatus();
     return (
