@@ -7,8 +7,15 @@ import { deleteApiKey } from "@/lib/actions"
 import { getApiKey } from "@/lib/data"
 import Link from "next/link"
 
+interface ApiKey {
+    id: string;
+    api_key: string;
+    createdAt: Date;
+    updatedAt: Date | null;
+}
+
 const ApiKey = async () => {
-    const apiKeys: any[] = await getApiKey();
+    const apiKeys: ApiKey[] = await getApiKey();
     return (
         <>
             <Card>
