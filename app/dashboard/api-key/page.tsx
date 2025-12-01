@@ -35,7 +35,7 @@ const ApiKey = async () => {
                                     <div className="flex gap-1 justify-center">
                                         <Link href={`/dashboard/api-key/edit/${api.id}`} className={buttonVariants({ variant: "secondary" })}>Edit</Link>
                                         <FormDelete id={api.id} />
-                                        <ApiTest api_key={api.api_key} />
+                                        {/* <ApiTest api_key={api.api_key} /> */}
                                     </div>
                                 </TableCell>
                             </TableRow>
