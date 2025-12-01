@@ -15,7 +15,14 @@ interface ApiKey {
 }
 
 const ApiKey = async () => {
-    const apiKeys: ApiKey[] = await getApiKey();
+    const result = await getApiKey();
+
+    // Pastikan selalu array
+    const apiKeys: ApiKey[] = Array.isArray(result)
+        ? result
+        : result
+            ? [result]
+            : [];
     return (
         <>
             <Card>
